@@ -19,7 +19,7 @@
         "start": "electron .",
         "build": "npm run build:macos && npm run build:linux && npm run build:windows",
         "build:macos": "electron-packager . --overwrite --asar --out=dist --ignore='^media$' --prune --platform=darwin --arch=x64 --icon=resources/icon.icns --app-bundle-id=com.cognophile.deskcal --app-version=$npm_package_version && cd dist/Deskcal-darwin-x64 && zip -ryXq9 ../Deskcal-osx-${npm_package_version}.zip Deskcal.app",
-        "build:linux": "electron-packager . --overwrite --out=dist --ignore='^media$' --prune --platform=linux --arch=x64 --icon=resources/icon.png --app-bundle-id=com.cognophile.deskcal --app-version=$npm_package_version && cd dist/Deskcal-linux-x64/ && zip -ryq9 ../Deskcal-${npm_package_version}.zip *",
+        "build:linux": "electron-packager . --overwrite --out=dist --ignore='^media$' --prune --platform=linux --arch=x64 --icon=resources/icon.png --app-bundle-id=com.cognophile.deskcal --app-version=$npm_package_version && cd dist/Deskcal-linux-x64/ && zip -ryq9 ../Deskcal-linux-${npm_package_version}.zip *",
         "build:windows": "electron-packager . --overwrite --asar --out=dist --ignore='^media$' --prune --platform=win32 --arch=ia32 --icon=resources/icon.ico --version-string.ProductName=$npm_package_productName --app-version=$npm_package_version && cd dist/Deskcal-win32-ia32 && zip -ryq9 ../Deskcal-windows-${npm_package_version}.zip *"
     },
     "devDependencies": {
