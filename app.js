@@ -1,7 +1,8 @@
 'use strict';
 
 const path = require('path');
-const { app, BrowserWindow, Menu } = require('electron')
+const { app, BrowserWindow, Menu } = require('electron');
+const openAboutWindow = require('about-window').default;
 
 let window
 
@@ -26,12 +27,27 @@ function getApplicationTemplateBindings() {
         {
         label: "Application",
         submenu: [
-                { label: "About Application", selector: "orderFrontStandardAboutPanel:" },
+                { label: "About", 
+                    click: () => openAboutWindow({
+                        icon_path: path.join(__dirname, 'resources', 'icon.png'),
+                        package_json_dir: __dirname,
+                        product_name: 'Deskcal',
+                        bug_link_text: 'Found a bug?',
+                        bug_report_url: 'https://github.com/cognophile/Deskcal/issues/new',
+                        use_version_info: true,
+                        copyright: 'Copyright (c) cognophile 2020',
+                        adjust_window_size: true,
+                        win_options: {
+                            parent: window,
+                            modal: true,
+                        },
+                        show_close_button: 'Close'
+                    }),
+                    accelerator: "Command+,"
+                },
                 { type: "separator" },
                 { label: "Hide", accelerator: "Command+H", click: function() { app.hide(); }},
-                { type: "separator" },
                 { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }},
-                { type: "separator" }
             ]
         },
         {
@@ -64,6 +80,7 @@ function initialiseWindow() {
         height: 1000,
         resizable: true,
         transparent: false,
+        frame: false,
         autoHideMenuBar: true, 
         titleBarStyle: "hidden",
         icon: process.platform === 'linux' && path.join(__dirname, 'resources', 'icon.png'),
