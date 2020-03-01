@@ -4,7 +4,7 @@
 <img src="https://image.flaticon.com/icons/svg/281/281770.svg" alt="google-calendar-icon" width="64" height="64" align="right" hspace="0" vspace="3"/>
 
 ## Welcome! 👋
-Deskcal is an unofficial cross-platform desktop application for managing your Google Calendar, locally. 
+Deskcal is an unofficial cross-platform desktop application for managing your Google Calendar, locally. Now you can use the full Google Calendar product from your desktop! 
 
 ## Getting started 👩‍💻👨‍💻
 To download the application, visit the [Releases](https://github.com/cognophile/Deskcal/releases) page and download the latest verison of the application suitable for your platform. If you're unsure which you need, check the list below.
