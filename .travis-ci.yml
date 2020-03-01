@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '4'
+
+install:
+  - npm install
+
+jobs: 
+  include: 
+    - stage: build [macos]
+      script: npm run build:macos
+    - stage: build [windows]
+      script: npm run build:windows
+    - stage: build [linux]
+      script: npm run build:linux
