@@ -9,9 +9,9 @@ Deskcal is an unofficial cross-platform desktop application for managing your Go
 ## Getting started 👩‍💻👨‍💻
 To download the application, visit the [Releases](https://github.com/cognophile/Deskcal/releases) page and download the latest verison of the application suitable for your platform. If you're unsure which you need, check the list below.
 
-* Windows 💻: Unzip `Deskcal-windows-*.zip` and double-click to run the contained `Deskcal.exe`.
-* macOS 🍎: Unzip `Deskcal-macos-*.zip` and double-click to run the contained `Deskcal.app`.
-* Linux 🐧: Unzip `Deskcal-linux-*.zip` and run the contained `Deskcal`.
+* **Windows** 💻: Unzip `Deskcal-windows-*.zip` and double-click to run the contained `Deskcal.exe`.
+* **macOS** 🍎: Unzip `Deskcal-macos-*.zip` and double-click to run the contained `Deskcal.app`. You should then copy this into your `Applications` folder.
+* **Linux** 🐧: Unzip `Deskcal-linux-*.zip` and run the contained `Deskcal` after creating a desktop launcher. This may vary according to your flavour of Linux, but [this](https://askubuntu.com/a/330783/778594) may help.
 
 ## Reporting
 If you encounter any issues with the application, please submit an [issue](https://github.com/cognophile/Deskcal/issues) with as much information as possible about your platform, the application version, what you did, what happend, and any errors displayed.
@@ -19,6 +19,7 @@ If you encounter any issues with the application, please submit an [issue](https
 ## Development ⚙️
 ### Prerequisties 🧱
 * [Node.js and NPM](https://nodejs.org/en/)
+* Wine
 
 ### Building 🏗
 Once cloned and the prerequisites have been installed on your system, start by installing the project dependencies. 
