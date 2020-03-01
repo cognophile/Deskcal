@@ -34,6 +34,7 @@ function getApplicationTemplateBindings() {
                         product_name: 'Deskcal',
                         bug_link_text: 'Found a bug?',
                         bug_report_url: 'https://github.com/cognophile/Deskcal/issues/new',
+                        homepage: 'https://github.com/cognophile/Deskcal',
                         use_version_info: true,
                         copyright: 'Copyright (c) cognophile 2020',
                         adjust_window_size: true,
