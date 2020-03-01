@@ -18,9 +18,7 @@ If you encounter any issues with the application, please submit an [issue](https
 
 ## Development ⚙️
 ### Prerequisties 🧱
-* NPM and Node.js 
-* Electron 
-* Electron Packager
+* [Node.js and NPM](https://nodejs.org/en/)
 
 ### Building 🏗
 Once cloned and the prerequisites have been installed on your system, start by installing the project dependencies. 
