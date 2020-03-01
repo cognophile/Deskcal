@@ -9,9 +9,9 @@ Deskcal is an unofficial cross-platform desktop application for managing your Go
 ## Getting started 👩‍💻👨‍💻
 To download the application, visit the [Releases](https://github.com/cognophile/Deskcal/releases) page and download the latest verison of the application suitable for your platform. If you're unsure which you need, check the list below.
 
-* Windows 💻: Deskcal.exe
-* macOS 🍎: Deskcal.app
-* Linux 🐧: Deskcal
+* Windows 💻: Unzip `Deskcal-windows-*.zip` and double-click to run the contained `Deskcal.exe`.
+* macOS 🍎: Unzip `Deskcal-macos-*.zip` and double-click to run the contained `Deskcal.app`.
+* Linux 🐧: Unzip `Deskcal-linux-*.zip` and run the contained `Deskcal`.
 
 ## Reporting
 If you encounter any issues with the application, please submit an [issue](https://github.com/cognophile/Deskcal/issues) with as much information as possible about your platform, the application version, what you did, what happend, and any errors displayed.
