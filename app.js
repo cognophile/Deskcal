@@ -92,6 +92,8 @@ function initialiseWindow() {
         },
     });
 
+    loadService();
+
     const document = window.webContents;
     const appTemplate = getApplicationTemplateBindings()
     Menu.setApplicationMenu(Menu.buildFromTemplate(appTemplate));
@@ -103,8 +105,6 @@ function initialiseWindow() {
     window.on('closed', function () {
         window = null
     });
-
-    loadService();
 }
 
 app.on('ready', function () {
