@@ -2,7 +2,7 @@
     "name": "Deskcal",
     "productName": "Deskcal",
     "desktopName": "Deskcal",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "description": "An unofficial cross-platform desktop Google Calendar application",
     "main": "app.js",
     "repository": "https://github.com/cognophile/Deskcal",
@@ -11,6 +11,7 @@
     "license": "GNU General Public License v3.0",
     "files": [
         "app.js",
+        "assets/styles.css",
         "resources/icon.png",
         "resources/icon.ico",
         "resources/icon.icns"
