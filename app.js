@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const filesystem = require('fs');
 const { app, BrowserWindow, Menu } = require('electron');
 const openAboutWindow = require('about-window').default;
 
@@ -14,10 +15,6 @@ let window
  */
 function loadService() {
     window.loadURL('https://calendar.google.com')
-
-    window.webContents.on('did-finish-load', function() {
-        window.webContents.insertCSS('html,body { -webkit-app-region: drag; !important; }');
-    });
 }
 
 /**
@@ -86,8 +83,8 @@ function initialiseWindow() {
         height: 1000,
         resizable: true,
         transparent: false,
-        frame: false,
         autoHideMenuBar: true, 
+        frame: false,
         titleBarStyle: "hidden",
         icon: process.platform === 'linux' && path.join(__dirname, 'resources', 'icon.png'),
         webPreferences: {
@@ -95,35 +92,34 @@ function initialiseWindow() {
         },
     });
 
-    window.on('closed', function () {
-        // Dereference the window object, usually you would store windows
-        // in an array if your app supports multi windows, this is the time
-        // when you should delete the corresponding element.
-        window = null
-    })
-
-    loadService();
+    const document = window.webContents;
     const appTemplate = getApplicationTemplateBindings()
     Menu.setApplicationMenu(Menu.buildFromTemplate(appTemplate));
+
+    document.on('dom-ready', () => {
+        document.insertCSS(filesystem.readFileSync(path.join(__dirname, 'assets/styles.css'), 'utf8'));
+    });
+
+    window.on('closed', function () {
+        window = null
+    });
+
+    loadService();
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.on('ready', initialiseWindow)
+app.on('ready', function () {
+    initialiseWindow();
+    window.show();
+})
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
-  // On OS X it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') {
     app.quit()
   }
 })
 
 app.on('activate', function () {
-  // On OS X it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
   if (window === null) {
     initialiseWindow()
   }
