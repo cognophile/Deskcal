@@ -14,6 +14,10 @@ let window
  */
 function loadService() {
     window.loadURL('https://calendar.google.com')
+
+    window.webContents.on('did-finish-load', function() {
+        window.webContents.insertCSS('html,body { -webkit-app-region: drag; !important; }');
+    });
 }
 
 /**
@@ -27,7 +31,8 @@ function getApplicationTemplateBindings() {
         {
         label: "Application",
         submenu: [
-                { label: "About", 
+                { 
+                    label: "About", 
                     click: () => openAboutWindow({
                         icon_path: path.join(__dirname, 'resources', 'icon.png'),
                         package_json_dir: __dirname,
