@@ -84,7 +84,6 @@ function initialiseWindow() {
         resizable: true,
         transparent: false,
         autoHideMenuBar: true, 
-        frame: false,
         titleBarStyle: "hidden",
         icon: process.platform === 'linux' && path.join(__dirname, 'resources', 'icon.png'),
         webPreferences: {
@@ -99,7 +98,9 @@ function initialiseWindow() {
     Menu.setApplicationMenu(Menu.buildFromTemplate(appTemplate));
 
     document.on('dom-ready', () => {
-        document.insertCSS(filesystem.readFileSync(path.join(__dirname, 'assets/styles.css'), 'utf8'));
+        if (process.platform === 'darwin') {
+            document.insertCSS(filesystem.readFileSync(path.join(__dirname, 'assets/styles.css'), 'utf8'));
+        }
     });
 
     window.on('closed', function () {
