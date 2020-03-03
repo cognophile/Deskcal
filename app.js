@@ -14,7 +14,9 @@ let window
  * @returns void
  */
 function loadService() {
-    window.loadURL('https://calendar.google.com')
+    window.loadURL('https://calendar.google.com', {
+        userAgent: 'Chrome'
+    });
 }
 
 /**
