@@ -86,7 +86,6 @@ function initialiseWindow() {
         resizable: true,
         transparent: false,
         autoHideMenuBar: true, 
-        titleBarStyle: "hidden",
         icon: process.platform === 'linux' && path.join(__dirname, 'resources', 'icon.png'),
         webPreferences: {
             nodeIntegration: true
