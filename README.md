@@ -1,7 +1,7 @@
 # Deskcal 📅
 [![Build Status](https://travis-ci.com/cognophile/Deskcal.svg?branch=master)](https://travis-ci.com/cognophile/Deskcal) 
 
-<img src="https://image.flaticon.com/icons/svg/281/281770.svg" alt="google-calendar-icon" width="64" height="64" align="right" hspace="0" vspace="3"/>
+<img src="resources/icon.png" alt="google-calendar-icon" width="64" height="64" align="right" hspace="0" vspace="3"/>
 
 ## Welcome! 👋
 Deskcal is an unofficial cross-platform desktop application for managing your Google Calendar, locally. Now you can use the full Google Calendar product from your desktop! 
