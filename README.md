@@ -16,7 +16,7 @@ To download the application, visit the [Releases](https://github.com/cognophile/
 ## Reporting
 If you encounter any issues with the application, please submit an [issue](https://github.com/cognophile/Deskcal/issues) with as much information as possible about your platform, the application version, what you did, what happend, and any errors displayed.
 
-### Support
+## Support
 If you find this application useful and wish to take a moment to say a simple thanks, or support its development, then a star or donation would be hugely appreciated!
 
 <a href="https://www.buymeacoffee.com/cognophile"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cognophile&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
